@@ -1,12 +1,9 @@
-// See Real-Time Servers II: File Servers for understanding 
-// how we set up and use express
 var express = require("express");
 var app = express();
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
 
-// We will use the generate-maze module to generate random mazes
-// Details at: https://www.npmjs.com/package/generate-maze
+// generate-maze module to generate random mazes
 var mazeGenerator = require("generate-maze");
 
 // MySQL Parameters
@@ -29,9 +26,6 @@ connection.connect(function(error){
 	}
 });
 
-// We are going to serve our static pages from the public directory
-// See Real-Time Servers II: File Servers for understanding
-// how we set up and use express
 app.use(express.static("public"));
 
 var maze;
@@ -56,24 +50,12 @@ function getMazeData() {
 	return mazeData;
 }
 
-/*
- * This is our event handler for a connection.
- * That is to say, any code written here executes when a client makes a connection to the server
- * (i.e. when the page is loaded)
- * 
- * See Real-Time Servers III: socket.io and Messaging for help understanding how
- * we set up and use socket.io
- */
 io.on("connection", function(socket) {
 
 	// Print an acknowledge to the server's console to confirm a player has connected
 	console.log("Player connected: " + socket.id);
 	
-	/*
-	 * Here we send all information about a maze to the client that has just connected
-	 * For full details about the data being sent, check the getMazeData method
-	 * This message triggers the socket.on("maze data"... event handler in the client
-	 */
+	// emit maze data to all clients
 	socket.emit("maze data", getMazeData());
 
 	// define new player object for each connection
@@ -161,12 +143,7 @@ io.on("connection", function(socket) {
 	});
 });
 
-/*
- * The generateMaze function uses the generate-maze module to create a random maze,
- * which is stored in the 'maze' variable as a 2D array.
- * Additionally, a start point is created (this is always at the top-left corner)
- * and an end point is created (this is always the bottom-right corner).
- */
+
 function generateMaze() {
 	maze = mazeGenerator(rows, cols);
 	mazeStart = { 
@@ -179,12 +156,6 @@ function generateMaze() {
 	};
 }
 
-/*
- * Start the server, listening on port 8081.
- * Once the server has started, output confirmation to the server's console.
- * After initial startup, generate a maze, ready for the first time a client connects.
- *
- */
 server.listen(8081, function() {
 	console.log("Map server has started - connect to 127.0.0.1:8081");
 	generateMaze();
