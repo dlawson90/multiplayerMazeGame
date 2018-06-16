@@ -156,7 +156,7 @@ function generateMaze() {
 	};
 }
 
-server.listen(8081, function() {
+server.listen(process.env.PORT, function() {
 	console.log("Map server has started - connect to 127.0.0.1:8081");
 	generateMaze();
 	console.log("Initial Maze generated!");
