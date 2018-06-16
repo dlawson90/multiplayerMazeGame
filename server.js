@@ -9,11 +9,11 @@ var mazeGenerator = require("generate-maze");
 // MySQL Parameters
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-	host: "",
+	host: "sql2.freemysqlhosting.net",
 	port: 3306,
-	user: "",
-	password: "",
-	database: ""
+	user: "sql2243217",
+	password: "qM9%uN1%",
+	database: "sql2243217"
 });
 
 // connect to database - log any errors(if any)

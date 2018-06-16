@@ -2,10 +2,10 @@ var mysql = require("mysql");
 
 // Initial Connection
 var connectionNoDB = mysql.createConnection({
-    host: "",
+    host: "sql2.freemysqlhosting.net",
     port: 3306,
-    user: "",
-    password: ""
+    user: "sql2243217",
+    password: "qM9%uN1%"
 });
 
 // connect to database
@@ -34,11 +34,11 @@ connectionNoDB.end();
 
 // New connection using newly created database
 var connection = mysql.createConnection({
-    host: "",
+    host: "sql2.freemysqlhosting.net",
     port: 3306,
-    user: "",
-    password: "",
-    database: ""
+    user: "sql2243217",
+    password: "qM9%uN1%",
+    database: "sql2243217"
 });
 
 connection.connect(function(error){
