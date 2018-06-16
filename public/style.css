@@ -1,0 +1,90 @@
+h1, h2, h3, div, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+}
+
+button {
+    width:75px;
+    height: 75px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(23, 90, 153);
+    color: #FFF;
+    border: 1px solid rgb(18, 71, 121);
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(35, 118, 196)
+}
+
+#up{
+    margin-left: 93px;	
+}
+
+#game {
+    float:left;
+}
+
+#log {
+    border: 1px solid #CCC;
+    float: left;
+    margin: 0 25px;
+    width: 500px;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+#log h3{
+    background-color: rgb(23, 90, 153);
+    color: #FFF;
+    padding: 5px 5px 5px 10px;
+}
+
+#messages {
+    padding: 10px;
+    overflow-y: scroll;
+    min-height: 452px;
+    max-height: 452px;
+}
+
+#messages p {
+    margin: 2px 0;
+}
+
+#controls {
+    clear: right;
+    clear: left;
+    margin: 10px;
+}
+
+.connected {
+    color: rgb(8, 109, 8);
+}
+
+.disconnected {
+    color: rgb(151, 6, 6);
+}
+
+.won {
+    color: rgb(190, 162, 0);
+}
+
+/* optimise layout for phones */
+@media (max-width: 600px) {
+
+    #controls {
+        display: none;
+        visibility: hidden;
+    }
+
+    #log {
+        margin: 5px 0; 
+    }
+}

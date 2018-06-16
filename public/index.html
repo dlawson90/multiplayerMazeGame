@@ -1,0 +1,51 @@
+
+<html>
+	<head>
+		<title>Maze Game</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+		<script src="MapClient.js"></script>
+
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<meta name="viewport" content="width=device-width" />
+		
+	</head>
+	
+	<body>
+		
+		<div id="container">
+			<div id="game">
+				<canvas style="border: 2px solid black" 
+						width="500" 
+						height="500">
+						
+					Your browser has no Canvas support!
+				</canvas>
+			</div>
+			<div id="log">
+				<h3>Log</h3>
+				<div id="messages"><p class="connected">You have connected!</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="controls">
+			<br>
+			
+			<h2>Mouse Controls</h2><br>
+
+			<button id="up"><i class="fas fa-arrow-up fa-2x"></i></button><br>
+			<button id="left"><i class="fas fa-arrow-left fa-2x"></i></button>
+			<button id="down"><i class="fas fa-arrow-down fa-2x"></i></button>
+			<button id="right"><i class="fas fa-arrow-right fa-2x"></i></button>
+		</div>
+
+	</body>
+
+</html>
