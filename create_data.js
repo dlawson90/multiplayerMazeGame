@@ -4,8 +4,8 @@ var mysql = require("mysql");
 var connectionNoDB = mysql.createConnection({
     host: "sql2.freemysqlhosting.net",
     port: 3306,
-    user: "sql2243217",
-    password: "qM9%uN1%"
+    user: "",
+    password: ""
 });
 
 // connect to database
@@ -36,9 +36,9 @@ connectionNoDB.end();
 var connection = mysql.createConnection({
     host: "sql2.freemysqlhosting.net",
     port: 3306,
-    user: "root",
-    password: "qM9%uN1%",
-    database: "sql2243217"
+    user: "",
+    password: "",
+    database: ""
 });
 
 connection.connect(function(error){
