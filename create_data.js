@@ -2,10 +2,10 @@ var mysql = require("mysql");
 
 // Initial Connection
 var connectionNoDB = mysql.createConnection({
-    host: "localhost",
+    host: "sql2.freemysqlhosting.net",
     port: 3306,
-    user: "root",
-    password: ""
+    user: "sql2243217",
+    password: "qM9%uN1%"
 });
 
 // connect to database
@@ -17,7 +17,7 @@ connectionNoDB.connect(function(error){
 });
 
 // create database query
-var createDatabase = "CREATE DATABASE IF NOT EXISTS maze";
+var createDatabase = "CREATE DATABASE IF NOT EXISTS sql2243217";
 
 // create database
 connectionNoDB.query(createDatabase, function(error) {
@@ -34,11 +34,11 @@ connectionNoDB.end();
 
 // New connection using newly created database
 var connection = mysql.createConnection({
-    host: "localhost",
+    host: "sql2.freemysqlhosting.net",
     port: 3306,
     user: "root",
-    password: "",
-    database: "maze"
+    password: "qM9%uN1%",
+    database: "sql2243217"
 });
 
 connection.connect(function(error){
