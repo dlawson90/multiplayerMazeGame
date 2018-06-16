@@ -5,3 +5,5 @@ A multiplayer maze game I developed for my second year university web assignment
 * Express
 * Sockets.io
 * MySQL
+
+Live: https://mighty-woodland-69928.herokuapp.com
