@@ -3,7 +3,7 @@ A multiplayer maze game I developed for my second year university web assignment
 
 * Node.js
 * Express
-* Sockets.io
+* Socket.io
 * MySQL
 
 Live: https://mighty-woodland-69928.herokuapp.com
